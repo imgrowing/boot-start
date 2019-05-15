@@ -23,5 +23,6 @@ db-migration/
 contiperf-report/
 bin/
 build/
+*/src/main/generated/
 */src/generated/
 .DS_Store

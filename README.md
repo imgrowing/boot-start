@@ -7,6 +7,12 @@
 * lombok
 * joda time
 
-## 주요 경로
-* queryDsl 소스 생성 경로
-** `src/main/java`
+## 주요 정보
+* queryDsl 생성 Task
+<pre>
+Gradle: Tasks > other > compileQuerydsl
+</pre>
+* queryDsl 소스 생성 경로:
+<pre>
+src/main/java
+</pre>

@@ -7,7 +7,7 @@
 ## 의존성
 * spring web
 * spring jpa + data-jpa + queryDsl
-* H2
+* MySQL(MariaDB)
 * lombok
 * joda time
 

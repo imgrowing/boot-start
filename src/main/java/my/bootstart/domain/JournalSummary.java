@@ -18,19 +18,19 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-public class Journal {
+public class JournalSummary {
 	private static final DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss");
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String title;
-	private Date created;
+	private Date createdAt;
 	private String summary;
 
-	public Journal(String title, String summary, String datetime) {
+	public JournalSummary(String title, String summary, String datetime) {
 		this.title = title;
 		this.summary = summary;
-		this.created = formatter.parseDateTime(datetime).toDate();
+		this.createdAt = formatter.parseDateTime(datetime).toDate();
 	}
 }

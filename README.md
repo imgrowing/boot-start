@@ -18,7 +18,7 @@ Gradle: Tasks > other > compileQuerydsl
 </pre>
 * queryDsl 소스 생성 경로:
 <pre>
-src/main/java
+src/main/java/generated/
 </pre>
 
 ## MySQL 접속 정보 지정

@@ -5,17 +5,14 @@ buildscript {
 	}
 	dependencies {
 		classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.21.RELEASE'
-		classpath 'gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.10'
 	}
 }
 
 plugins {
 	id 'java'
-	id "org.flywaydb.flyway" version "5.0.7"
 }
 
 apply plugin: 'org.springframework.boot'
-apply plugin: "com.ewerk.gradle.plugins.querydsl" // Plugin 적용
 
 
 group = 'my'
@@ -27,45 +24,13 @@ repositories {
 	mavenCentral()
 }
 
-def querydslSrcDir = 'src/main/generated' // QClass 생성 위치
-
-querydsl {
-	library = "com.querydsl:querydsl-apt"
-	jpa = true
-	querydslSourcesDir = querydslSrcDir
-}
-
-
-sourceSets {
-	main {
-		java {
-			srcDirs = ['src/main/java', querydslSrcDir]
-		}
-	}
-}
-
-/*
-gradle task 실행 순서
-사전: database는 만들어져 있어야 함
-flywayClean을 하면 database가 모두 초기화 됨
-flywayMigrate 를 실행하면 Version.SQL이 실행됨
-gradle task 실행시 JVM 옵션 : -Ddb.server=서버주소:포트 -Ddb.user=username -Ddb.password=userpwd
- */
-flyway {
-	url = 'jdbc:mysql://' + System.getProperty('db.server') + '/sampledb?useUnicode=true&charaterEncoding=utf-8'
-	user = System.getProperty('db.user')
-	password = System.getProperty('db.password')
-}
-
 dependencies {
-	// compile 'org.springframework.boot:spring-boot-starter-web'
-	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtime 'mysql:mysql-connector-java'
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-starter-cache'
+
+	compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.3'
 
 	compile group: 'joda-time', name: 'joda-time', version: '2.10.1'
-
-	compile "com.querydsl:querydsl-jpa" // querydsl
-	compile "com.querydsl:querydsl-apt" // querydsl
 
 	compile 'org.projectlombok:lombok'
 

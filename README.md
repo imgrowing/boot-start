@@ -24,3 +24,9 @@ src/main/java/generated/
 
 ## MySQL 접속 정보 지정
 * Boot Application 실행할 때에 "VM Options" 에 `-Ddb.server=서버주소:포트` 형식으로 지정한다.
+
+
+## Todo
+* Batch
+* Cache - Ehcache
+* 

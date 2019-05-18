@@ -8,7 +8,8 @@
 * spring web
 * spring jpa + data-jpa + queryDsl
 * MySQL(MariaDB)
-* lombok
+* Flyway
+* Lombok
 * joda time
 
 ## 주요 정보

@@ -9,7 +9,7 @@ tmp
 *.iml
 project/
 .gradle/
-out
+out/
 .metadata
 Servers
 classes/

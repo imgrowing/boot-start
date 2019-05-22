@@ -12,6 +12,11 @@
 * Lombok
 * joda time
 
+## 기술
+* JPA, spring data jpa, queryDSL
+* Spring Batch
+* ...
+
 ## 주요 정보
 * queryDsl 생성 Task
 <pre>

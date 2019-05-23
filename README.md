@@ -25,8 +25,6 @@ src/main/java/generated/
 ## MySQL 접속 정보 지정
 * Boot Application 실행할 때에 "VM Options" 에 `-Ddb.server=서버주소:포트` 형식으로 지정한다.
 
-
-## Todo
-* Batch
-* Cache - Ehcache
-* 
+## batch job 실행
+* Application 실행 옵션에서 `Program arguments` 항목에 실행하고자 하는 job을 `--job.name=[batchJob이름]` 형식으로 지정한다.
+* job 에 대한 파라미터는 `Program arguments` 항목에 지정한다. 하나의 job에 대해 동일한 파라미터로 다시 실행하면 오류가 발생한다.

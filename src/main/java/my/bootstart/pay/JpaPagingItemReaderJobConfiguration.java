@@ -45,7 +45,7 @@ public class JpaPagingItemReaderJobConfiguration {
 		reader.setName("jpaPagingItemReader");
 		reader.setEntityManagerFactory(entityManagerFactory);
 		reader.setPageSize(chunkSize);
-		reader.setQueryString("SELECT p FROM Pay p WHERE amount >= 2000");
+		reader.setQueryString("SELECT p FROM Pay p WHERE amount >= 2000 ORDER BY id DESC");
 		return reader;
 	}
 

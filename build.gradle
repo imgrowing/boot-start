@@ -67,7 +67,7 @@ dependencies {
 	compile "com.querydsl:querydsl-jpa" // querydsl
 	compile "com.querydsl:querydsl-apt" // querydsl
 
-	compile 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok'
 
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }

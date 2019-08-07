@@ -52,7 +52,7 @@ flywayMigrate 를 실행하면 Version.SQL이 실행됨
 gradle task 실행시 JVM 옵션 : -Ddb.server=서버주소:포트 -Ddb.user=username -Ddb.password=userpwd
  */
 flyway {
-	url = 'jdbc:mysql://' + System.getProperty('db.server') + '/sampledb?useUnicode=true&charaterEncoding=utf-8'
+	url = 'jdbc:mysql://' + System.getProperty('db.server') + '/sampledb?useUnicode=true&characterEncoding=utf-8'
 	user = System.getProperty('db.user')
 	password = System.getProperty('db.password')
 }
